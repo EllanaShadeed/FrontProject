@@ -294,8 +294,9 @@ const columnswithCashDepositTrxType=[
   title: 'Currency', field:'currency',
 },
 {
-  title: 'Input Detailes', field:'inpoutDetels',
-},
+  title:'Input details',feild:'inpoutDetels'}
+  ,
+
 {
 title: 'Transaction Number', field:'transaction',
 },
@@ -386,9 +387,7 @@ const columnswithCashWithdrawalTrxType=[
 {
   title: 'Currency', field:'currency',
 },
-{
-  title: 'Input Detailes', field:'inpoutDetels',
-},
+
 {
 title: 'Transaction Number', field:'transaction',
 },
@@ -1036,7 +1035,7 @@ handleCloseChequeDeposit();
        `chd_authcode=${encodeURIComponent(AuthCode)}`,
        `cad_amount=${encodeURIComponent(Amount)}`,
        `cad_currency=${encodeURIComponent(Currency)}`,
-       `cad_inpoutetels=${encodeURIComponent(InputDetailes)}`,
+      
        `chd_transaction=${encodeURIComponent(TransactionNumber)}`,
        
      ].join('&');
@@ -1082,7 +1081,8 @@ handleCloseChequeDeposit();
  }
   
       
-     console.log(data);
+     console.log(data.inpoutDetels
+      );
 
 
 
@@ -1404,11 +1404,7 @@ handleCloseChequeDeposit();
                 required id="filled-basic" label="Currency" variant="filled" />
                 
   </Grid>
-  <Grid item xs={3}>
-  <TextField value={InputDetailes} onChange={handleInputDetailesChange}
-                required id="filled-basic" label="Input Detailes" variant="filled" />
-                
-  </Grid>
+ 
  
 </Grid>
 <bt/><br/>
