@@ -407,7 +407,7 @@
                 message: "serial must have 10 numbers"
               },
               pattern: {
-                value: /[0-9]/,
+                value: /[0-9]/,// regix (نمط)
                 message: "serial must be number"
               }
 
